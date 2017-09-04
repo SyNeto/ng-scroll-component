@@ -42,14 +42,11 @@ export class ScrollComponent implements OnInit {
   }
 
   goTo(scrollPosition: MdSliderChange): void{
-    console.log(this.frameElement.scrollTop);
-    console.log(scrollPosition)
     this.frameElement.scrollTop = scrollPosition.value;
   }
 
   updateCurrentScroll(){
     this.currentScroll = this.frameElement.scrollTop;
-    console.log(this.currentScroll);
   }
 
 }
