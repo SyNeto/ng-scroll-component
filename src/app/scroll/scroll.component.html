@@ -1,0 +1,14 @@
+<div #frameElement (scroll)="updateCurrentScroll()">
+  <ng-content></ng-content>
+</div>
+<button (click)="goUp()">up</button>
+<button (click)="goDown()">down</button>
+<md-slider
+  [value]="currentScroll"
+  [max]="scrollHeight"
+  (input)="goTo($event)"
+  vertical="true"
+  invert="true"
+  min="0"
+  step="5">
+</md-slider>
